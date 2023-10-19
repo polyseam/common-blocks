@@ -1,0 +1,16 @@
+# AWS Setup Prompts
+- name: aws_access_key_id
+  message: >-
+    Please enter your AWS Access Key ID:
+  type: Secret
+
+- name: aws_secret_access_key
+  message: >-
+    Please enter your AWS Secret Access Key:
+  type: Secret
+
+- name: aws_region
+  default: us-east-1
+  message: >-
+    Please enter your AWS Region:
+  type: Input

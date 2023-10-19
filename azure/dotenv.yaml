@@ -1,0 +1,4 @@
+FOO: bar
+BAM: moo
+EXTREMELY_UNNECESSARY_THIRD_EXAMPLE: azure
+AVAILABLE: $cndi.get_arg(available)

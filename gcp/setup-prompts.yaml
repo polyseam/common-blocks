@@ -1,0 +1,10 @@
+# GCP Setup Prompts
+- name: google_credentials_path
+  message: >-
+    Please enter the path to your GCP Credentials JSON file:
+  type: Secret
+
+- name: gcp_region
+  message: >-
+    Please enter your gcp_region:
+  type: Secret
