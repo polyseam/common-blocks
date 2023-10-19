@@ -1,0 +1,6 @@
+- name: neo4j-alpha
+  instance_type: t3.medium
+  disk_size: 100
+- name: neo4j-beta
+  instance_type: t3.medium
+  disk_size: 100
