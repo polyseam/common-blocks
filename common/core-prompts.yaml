@@ -70,7 +70,7 @@
   message: 'Please enter your Git Repo URL:'
   type: Input
 
-- name: lets_encrypt_email
+- name: cert_manager_email
   message: >-
     What email address should be used for Let's Encrypt certificate
     registration?
