@@ -1,4 +1,2 @@
-FOO: bar
-BAM: moo
-EXTREMELY_UNNECESSARY_THIRD_EXAMPLE: gcp
-AVAILABLE: $cndi.get_arg(available)
+GCP_REGION: "{{ $cndi.get_prompt_response(gcp_region) }}"
+GOOGLE_CREDENTIALS: "{{ $cndi.get_prompt_response(google_credentials) }}"

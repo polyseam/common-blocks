@@ -1,4 +1,3 @@
-FOO: bar
-BAM: moo
-EXTREMELY_UNNECESSARY_THIRD_EXAMPLE: aws
-AVAILABLE: $cndi.get_arg(available)
+AWS_REGION: "{{ $cndi.get_prompt_response(aws_region) }}"
+AWS_ACCESS_KEY_ID: "{{ $cndi.get_prompt_response(aws_access_key_id) }}"
+AWS_SECRET_ACCESS_KEY: "{{ $cndi.get_prompt_response(aws_secret_access_key) }}"
