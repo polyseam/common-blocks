@@ -3,11 +3,15 @@
   message: >-
     Please enter your AWS Access Key ID:
   type: Secret
+  validators:
+    - min_length: 16
 
 - name: aws_secret_access_key
   message: >-
     Please enter your AWS Secret Access Key:
   type: Secret
+  validators:
+    - min_length: 40
 
 - name: aws_region
   default: us-east-1
