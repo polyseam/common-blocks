@@ -43,8 +43,8 @@
     - azure
   type: Select
   options:
-    - aks
     - microk8s
+    - aks
     - rancher
 
 - name: use_git_ssh
@@ -57,6 +57,7 @@
   message: >-
     What is your git username?
   type: Input
+  required: true
 
 - name: git_password
   condition:
@@ -65,13 +66,18 @@
     - 'false' # this is a string but the prompt returns a boolean 👀
   message: 'Please enter your Git password:'
   type: Secret
+  required: true
 
 - name: git_repo
   message: 'Please enter your Git Repo URL:'
   type: Input
+  required: true
+  validators:
+    - url
 
 - name: cert_manager_email
   message: >-
     What email address should be used for Let's Encrypt certificate
     registration?
   type: Input
+  default: jane.doe@example.com
