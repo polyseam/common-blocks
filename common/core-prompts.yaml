@@ -72,8 +72,8 @@
   message: 'Please enter your Git Repo URL:'
   type: Input
   required: true
-  validators:
-    - url
+  # validators:
+  #   - url
 
 - name: cert_manager_email
   message: >-
