@@ -18,9 +18,9 @@
     - aws
   type: Select
   options:
+    - microk8s
     - eks
     - fargate
-    - microk8s
     - rancher
 
 - name: deployment_target_distribution
@@ -31,8 +31,8 @@
     - gcp
   type: Select
   options:
-    - gke
     - microk8s
+    - gke
     - rancher
 
 - name: deployment_target_distribution
