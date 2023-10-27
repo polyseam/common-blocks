@@ -63,9 +63,18 @@
   condition:
     - '{{ $cndi.get_prompt_response(use_git_ssh) }}'
     - ==
-    - 'false' # this is a string but the prompt returns a boolean 👀
+    - false # this is a string but the prompt returns a boolean 👀
   message: 'Please enter your Git password:'
   type: Secret
+  required: true
+
+- name: git_ssh_private_key
+  condition:
+    - '{{ $cndi.get_prompt_response(use_git_ssh) }}'
+    - ==
+    - true
+  message: 'Please enter a path to your SSH private key:'
+  type: File
   required: true
 
 - name: git_repo
