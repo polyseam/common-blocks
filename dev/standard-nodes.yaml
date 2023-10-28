@@ -1,0 +1,4 @@
+- name: local-dev-node
+  cpus: 4
+  memory: 16Gi
+  disk: 100Gi
