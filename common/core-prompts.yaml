@@ -47,11 +47,13 @@
     - aks
     - rancher
 
-- name: use_git_ssh
-  default: false
-  message: >-
-    Do you want to use SSH for git?
-  type: Confirm
+- name: git_credentials_mode
+  default: token
+  message: Would you like ArgoCD to connect to your repo using a Git token or SSH key?  
+  type: Select
+  options:
+    - token
+    - ssh
 
 - name: git_username
   message: >-
@@ -59,20 +61,20 @@
   type: Input
   required: true
 
-- name: git_password
+- name: git_token
   condition:
-    - '{{ $cndi.get_prompt_response(use_git_ssh) }}'
+    - '{{ $cndi.get_prompt_response(git_credentials_mode) }}'
     - ==
-    - false # this is a string but the prompt returns a boolean 👀
-  message: 'Please enter your Git password:'
+    - 'token' # this is a string but the prompt returns a boolean 👀
+  message: 'Please enter your Git Personal Access Token:'
   type: Secret
   required: true
 
 - name: git_ssh_private_key
   condition:
-    - '{{ $cndi.get_prompt_response(use_git_ssh) }}'
+    - '{{ $cndi.get_prompt_response(git_credentials_mode) }}'
     - ==
-    - true
+    - 'ssh'
   message: 'Please enter a path to your SSH private key:'
   type: File
   required: true
