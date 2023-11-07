@@ -13,10 +13,11 @@
 - name: deployment_target_distribution
   message: Select a distribution
   condition:
-    - '{{ $cndi.get_prompt_response(deployment_target_provider) }}'
+    - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
     - ==
     - aws
   type: Select
+  default: microk8s
   options:
     - microk8s
     - eks
@@ -26,10 +27,11 @@
 - name: deployment_target_distribution
   message: Select a distribution
   condition:
-    - '{{ $cndi.get_prompt_response(deployment_target_provider) }}'
+    - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
     - ==
     - gcp
   type: Select
+  default: microk8s
   options:
     - microk8s
     - gke
@@ -38,10 +40,11 @@
 - name: deployment_target_distribution
   message: Select a distribution
   condition:
-    - '{{ $cndi.get_prompt_response(deployment_target_provider) }}'
+    - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
     - ==
     - azure
   type: Select
+  default: microk8s
   options:
     - microk8s
     - aks
@@ -60,35 +63,39 @@
     What is your git username?
   type: Input
   required: true
+  default: ""
 
 - name: git_token
   condition:
-    - '{{ $cndi.get_prompt_response(git_credentials_mode) }}'
+    - "{{ $cndi.get_prompt_response(git_credentials_mode) }}"
     - ==
-    - 'token' # this is a string but the prompt returns a boolean 👀
-  message: 'Please enter your Git Personal Access Token:'
+    - "token"
+  message: "Please enter your Git Personal Access Token:"
   type: Secret
   required: true
+  default: ""
 
 - name: git_ssh_private_key
   condition:
-    - '{{ $cndi.get_prompt_response(git_credentials_mode) }}'
+    - "{{ $cndi.get_prompt_response(git_credentials_mode) }}"
     - ==
-    - 'ssh'
-  message: 'Please enter a path to your SSH private key:'
+    - "ssh"
+  message: "Please enter a path to your SSH private key:"
   type: File
-  required: true
+  required: true 
+  # default can be ommitted because this prompt is not displayed by default
 
 - name: git_repo
-  message: 'Please enter your Git Repo URL:'
+  message: "Please enter your Git Repo URL:"
   type: Input
   required: true
+  default: ""
   # validators:
   #   - url
 
 - name: cert_manager_email
   message: >-
-    What email address should be used for Let's Encrypt certificate
+    What email address should be used for Let"s Encrypt certificate
     registration?
   type: Input
   default: jane.doe@example.com

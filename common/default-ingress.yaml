@@ -5,22 +5,22 @@ metadata:
   namespace: "{{ $cndi.get_arg(namespace) }}"
   annotations:
     cert-manager.io/cluster-issuer: cluster-issuer
-    kubernetes.io/tls-acme: 'true'
-    nginx.ingress.kubernetes.io/ssl-passthrough: 'true'
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     nginx.ingress.kubernetes.io/backend-protocol: HTTPS
 spec:
   tls:
     - hosts:
-        - '{{ $cndi.get_arg(hostname) }}'
+        - "{{ $cndi.get_arg(hostname) }}"
       secretName: cluster-issuer-private-key
   rules:
-    - host: '{{ $cndi.get_arg(hostname) }}'
+    - host: "{{ $cndi.get_arg(hostname) }}"
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: '{{ $cndi.get_arg(service_name) }}'
+                name: "{{ $cndi.get_arg(service_name) }}"
                 port:
-                  number: '{{ $cndi.get_arg(service_port) }}'
+                  number: "{{ $cndi.get_arg(service_port) }}"
