@@ -3,8 +3,10 @@
   message: >-
     Please enter the path to your GCP Credentials JSON file:
   type: File
+  default: ""
 
 - name: gcp_region
   message: >-
     Please enter your gcp_region:
   type: Input
+  default: ""

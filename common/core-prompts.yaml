@@ -83,7 +83,7 @@
   message: "Please enter a path to your SSH private key:"
   type: File
   required: true 
-  # default can be ommitted because this prompt is not displayed by default
+  default: ""
 
 - name: git_repo
   message: "Please enter your Git Repo URL:"
