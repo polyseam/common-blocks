@@ -1,5 +1,12 @@
 # these are the core prompts that are used in CNDI
 # every response is available in the host template
+- name: project_name
+  message: >-
+    Please name your CNDI project:
+  type: Input
+  required: true
+  default: ""
+
 - name: deployment_target_provider
   type: Select
   message: Where do you want to deploy your cluster?
@@ -52,7 +59,7 @@
 
 - name: git_credentials_mode
   default: token
-  message: Would you like ArgoCD to connect to your repo using a Git token or SSH key?  
+  message: Would you like ArgoCD to connect to your repo using a Git token or SSH key?
   type: Select
   options:
     - token
@@ -82,7 +89,7 @@
     - "ssh"
   message: "Please enter a path to your SSH private key:"
   type: File
-  required: true 
+  required: true
   default: ""
 
 - name: git_repo
