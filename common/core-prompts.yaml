@@ -4,7 +4,6 @@
   message: >-
     Please name your CNDI project:
   type: Input
-  required: true
   default: ""
 
 - name: deployment_target_provider
@@ -69,7 +68,6 @@
   message: >-
     What is your git username?
   type: Input
-  required: true
   default: ""
 
 - name: git_token
@@ -79,7 +77,6 @@
     - "token"
   message: "Please enter your Git Personal Access Token:"
   type: Secret
-  required: true
   default: ""
 
 - name: git_ssh_private_key
@@ -89,13 +86,11 @@
     - "ssh"
   message: "Please enter a path to your SSH private key:"
   type: File
-  required: true
   default: ""
 
 - name: git_repo
   message: "Please enter your Git Repo URL:"
   type: Input
-  required: true
   default: ""
   # validators:
   #   - url
