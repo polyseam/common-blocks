@@ -1,6 +1,6 @@
-- name: x-node
-  instance_type: DS2_v2
+- name: xnode
+  instance_type: Standard_D2s_v3
   disk_size: 100
-- name: y-node
-  instance_type: DS2_v2
+- name: ynode
+  instance_type: Standard_D2s_v3
   disk_size: 100
