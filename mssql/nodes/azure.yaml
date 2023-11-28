@@ -1,6 +1,6 @@
 - name: mssql-alpha
-  instance_type: DS2_v2
+  instance_type: Standard_D2s_v3
   disk_size: 100
 - name: mssql-beta
-  instance_type: DS2_v2
+  instance_type: Standard_D2s_v3
   disk_size: 100

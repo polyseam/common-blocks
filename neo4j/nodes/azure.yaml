@@ -1,6 +1,6 @@
-- name: neo4j-alpha
-  instance_type: DS2_v2
+- name: neo4jalpha
+  instance_type: Standard_D2s_v3
   disk_size: 100
-- name: neo4j-beta
-  instance_type: DS2_v2
+- name: neo4jbeta
+  instance_type: Standard_D2s_v3
   disk_size: 100

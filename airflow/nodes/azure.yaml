@@ -1,6 +1,6 @@
-- name: airflow-alpha
-  instance_type: DS2_v2
+- name: airflowalpha
+  instance_type: Standard_D2s_v3
   disk_size: 100
-- name: airflow-beta
-  instance_type: DS2_v2
+- name: airflowbeta
+  instance_type: Standard_D2s_v3
   disk_size: 100
