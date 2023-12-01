@@ -9,4 +9,4 @@
   message: >-
     Please enter your gcp_region:
   type: Input
-  default: ""
+  default: "us-central1"
