@@ -1,6 +1,7 @@
 # Dev Prompts
-- name: engine
-  message: Which virtualization engine would you like to use for your cluster?
+- name: deployment_target_distribution
+  message: Which Kubernetes distribution would you like to use locally?
   type: Select
+  default: microk8s
   options:
-    - multipass
+    - microk8s
