@@ -1,6 +1,9 @@
-- name: mssql-alpha
+- name: x-node
   instance_type: n1-standard-2
   disk_size: 100
-- name: mssql-beta
+- name: y-node
+  instance_type: n1-standard-2
+  disk_size: 100
+- name: z-node
   instance_type: n1-standard-2
   disk_size: 100

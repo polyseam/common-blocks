@@ -1,6 +1,0 @@
-- name: airflowalpha
-  instance_type: Standard_D2s_v3
-  disk_size: 100
-- name: airflowbeta
-  instance_type: Standard_D2s_v3
-  disk_size: 100

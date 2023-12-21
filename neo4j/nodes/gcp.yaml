@@ -1,6 +1,0 @@
-- name: neo4j-alpha
-  instance_type: n1-standard-2
-  disk_size: 100
-- name: neo4j-beta
-  instance_type: n1-standard-2
-  disk_size: 100

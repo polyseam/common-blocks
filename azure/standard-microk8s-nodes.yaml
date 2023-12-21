@@ -4,3 +4,6 @@
 - name: ynode
   instance_type: Standard_D2s_v3
   disk_size: 100
+- name: znode
+  instance_type: Standard_D2s_v3
+  disk_size: 100

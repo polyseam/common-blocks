@@ -1,6 +1,0 @@
-- name: mssql-alpha
-  instance_type: t3.medium
-  disk_size: 100
-- name: mssql-beta
-  instance_type: t3.medium
-  disk_size: 100
