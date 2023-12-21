@@ -1,0 +1,6 @@
+# Dev Prompts
+- name: engine
+  message: Which virtualization engine would you like to use for your cluster?
+  type: Select
+  options:
+    - multipass
