@@ -1,4 +1,3 @@
 - name: x-node-pool
   instance_type: n1-standard-2
   disk_size: 100
-  count: 3
