@@ -27,8 +27,6 @@
   options:
     - microk8s
     - eks
-    - fargate
-    - rancher
 
 - name: deployment_target_distribution
   message: Select a distribution
@@ -41,7 +39,6 @@
   options:
     - microk8s
     - gke
-    - rancher
 
 - name: deployment_target_distribution
   message: Select a distribution
@@ -54,7 +51,6 @@
   options:
     - microk8s
     - aks
-    - rancher
 
 - name: git_credentials_mode
   default: token
@@ -92,8 +88,6 @@
   message: "Please enter your Git Repo URL:"
   type: Input
   default: ""
-  # validators:
-  #   - url
 
 - name: cert_manager_email
   message: >-
