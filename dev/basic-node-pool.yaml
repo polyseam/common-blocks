@@ -1,5 +1,0 @@
-- name: xnodegroup
-  cpus: 4
-  memory: 4
-  disk: 40
-
