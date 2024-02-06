@@ -111,7 +111,7 @@
     - azure
     - google
     - cloudflare
-    
+  default: aws
   condition:
     - "{{ $cndi.get_prompt_response(enable_autodns) }}"
     - ==
