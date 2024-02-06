@@ -28,3 +28,9 @@
     Please enter your arm_subscription_id:
   type: Secret
   default: ""
+
+- name: arm_resource_group
+  message: >-
+    Please enter the Resource Group ID where we can find your DNS Zone:
+  type: Secret
+  default: ""
