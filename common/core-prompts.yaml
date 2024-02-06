@@ -95,3 +95,24 @@
     registration?
   type: Input
   default: jane.doe@example.com
+
+- name: enable_autodns
+  message: >-
+    Would you like to enable external-dns for automatic DNS management?
+  type: Confirm
+  default: true
+
+- name: dns_provider
+  message: >-
+    Please select your DNS provider
+  type: Select
+  options:
+    - aws
+    - azure
+    - google
+    - cloudflare
+    
+  condition:
+    - "{{ $cndi.get_prompt_response(enable_autodns) }}"
+    - ==
+    - true
