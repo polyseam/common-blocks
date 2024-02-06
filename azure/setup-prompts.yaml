@@ -32,5 +32,5 @@
 - name: arm_resource_group
   message: >-
     Please enter the Resource Group ID where we can find your DNS Zone:
-  type: Secret
+  type: Input
   default: ""
