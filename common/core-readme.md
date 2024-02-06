@@ -40,7 +40,7 @@ pre-populated with a list of files that we know contain secret information.
 
 ## usage
 
-Now that you've ran `cndi init` and have a project, the next step is to set your
+Now that you've run `cndi init` and have a project, the next step is to set your
 environment variables in the [.env](/.env) file. Once you've done that you can
 use the GitHub CLI to set these variables as
 [GitHub Actions Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets?tool=cli).
@@ -72,7 +72,7 @@ cloud, and then apply the Kubernetes manifests to it.
 
 Now that you have a cluster, you can update it by:
 
-1. modifying your [cndi-config.jsonc](/cndi-config.jsonc) file
+1. modifying your [cndi_config.yaml](/cndi-config.yaml) file
 2. running `cndi ow`
 3. pushing all files to the `"main"` branch again
 
