@@ -96,7 +96,7 @@
   type: Input
   default: jane.doe@example.com
 
-- name: enable_autodns
+- name: enable_external_dns
   message: >-
     Would you like to enable external-dns for automatic DNS management?
   type: Confirm
@@ -113,6 +113,6 @@
     - cloudflare
   default: aws
   condition:
-    - "{{ $cndi.get_prompt_response(enable_autodns) }}"
+    - "{{ $cndi.get_prompt_response(enable_external_dns) }}"
     - ==
     - true
