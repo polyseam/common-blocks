@@ -1,2 +1,1 @@
-external_dns:
-  provider: "{{ $cndi.get_arg(dns_provider) }}"
+provider: "{{ $cndi.get_arg(dns_provider) }}"
