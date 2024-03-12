@@ -4,7 +4,7 @@
   message: >-
     Please name your CNDI project:
   type: Input
-  default: ""
+  default: "my-cndi-project"
 
 - name: deployment_target_provider
   type: Select
