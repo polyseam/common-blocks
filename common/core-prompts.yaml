@@ -23,9 +23,8 @@
     - ==
     - aws
   type: Select
-  default: microk8s
+  default: eks
   options:
-    - microk8s
     - eks
 
 - name: deployment_target_distribution
@@ -35,9 +34,8 @@
     - ==
     - gcp
   type: Select
-  default: microk8s
+  default: gke
   options:
-    - microk8s
     - gke
 
 - name: deployment_target_distribution
@@ -47,9 +45,8 @@
     - ==
     - azure
   type: Select
-  default: microk8s
+  default: aks
   options:
-    - microk8s
     - aks
 
 - name: git_credentials_mode
