@@ -16,6 +16,39 @@
     - gcp
     - dev
 
+- name: deployment_target_distribution
+  type: Select
+  message: What distribution do you want to use?
+  default: eks
+  condition:
+    - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
+    - ==
+    - aws
+  options:
+    - eks
+
+- name: deployment_target_distribution
+  type: Select
+  message: What distribution do you want to use?
+  condition:
+    - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
+    - ==
+    - gcp
+  default: gke
+  options:
+    - gke
+
+- name: deployment_target_distribution
+  type: Select
+  message: What distribution do you want to use?
+  condition:
+    - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
+    - ==
+    - azure
+  default: aks
+  options:
+    - aks
+
 - name: git_credentials_mode
   default: token
   message: Would you like ArgoCD to connect to your repo using a Git token or SSH key?
