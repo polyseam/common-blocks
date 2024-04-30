@@ -19,7 +19,6 @@
 - name: deployment_target_distribution
   type: Select
   message: What distribution do you want to use?
-  default: eks
   condition:
     - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
     - ==
@@ -34,7 +33,6 @@
     - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
     - ==
     - gcp
-  default: gke
   options:
     - gke
 
@@ -45,7 +43,6 @@
     - "{{ $cndi.get_prompt_response(deployment_target_provider) }}"
     - ==
     - azure
-  default: aks
   options:
     - aks
 
