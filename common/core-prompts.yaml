@@ -26,6 +26,7 @@
   default: eks
   options:
     - eks
+    - microk8s
 
 - name: deployment_target_distribution
   message: Select a distribution
@@ -37,6 +38,7 @@
   default: gke
   options:
     - gke
+    - microk8s
 
 - name: deployment_target_distribution
   message: Select a distribution
@@ -48,6 +50,7 @@
   default: aks
   options:
     - aks
+    - microk8s
 
 - name: git_credentials_mode
   default: token
